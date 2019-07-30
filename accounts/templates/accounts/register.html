@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row">
-    <div class="col-4"></div>
-    <form class="form-signin col align-self-center"  method="POST" action="{% url 'register' %}">
+<div class="row m-0">
+    <form class="form-signin col-10 col-sm-8 col-md-6 col-lg-4 mx-auto align-self-center mx-auto"  method="POST" action="{% url 'register' %}">
         {% if error %}
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
             {{error}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         {% endif %}
-        <h2 class="text-center" >Sign Up</h2>
+        <h2 class="text-center pt-2 pb-0" >Sign Up</h2>
         {% csrf_token %}
             <!--<div class="text-center mb-4">
                 <img class="mb-4" src="" alt="" width="72" height="72">
@@ -39,7 +41,6 @@
             <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
             <a href="{% url 'login' %}" class="nav-link text-right">Already Registered?</a>
     </form>
-    <div class="col-4"></div>
 </div>
   
 {% endblock %}

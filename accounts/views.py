@@ -67,6 +67,10 @@ def login_view(request):
         if user is not None:
             login(request,user)
             return redirect('/')
+        context = {
+            "error": "Wrong User Information!"
+            }
+        return render(request, "accounts/login.html", context)
     return render(request, "accounts/login.html")
 
 def logout_view(request):

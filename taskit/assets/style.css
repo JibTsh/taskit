@@ -1,0 +1,44 @@
+.bg-black{
+    background-color: rgb(56, 99, 7);
+}
+
+.dark-grad{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.dot-link{
+    border-bottom: 1px dashed navy;
+    text-decoration-style: none;
+}
+
+.search-icon{
+    margin-left: -25px;
+    margin-right: 0;
+}
+
+.ox{
+    overflow: hidden !important;
+}
+
+.ox-alone{
+    overflow-x: hidden !important;
+}
+
+.oy-alone{
+    overflow-y: hidden !important;
+    overflow-x: auto !important;
+}
+
+div.base_page{
+    box-sizing: border-box;
+    background-image: url("ag.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
+
+div.base_page>div>h2{
+    outline: 1px;
+    outline-color: black;
+}

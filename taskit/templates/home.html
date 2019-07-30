@@ -1,0 +1,55 @@
+<!--Ojo Ajibola-->
+{% extends "base.html" %}
+{% block content %}
+<div class="clearfix base_page mb-0 ox">
+    <div class="dark-grad">
+        <div class="container p-5">
+            <h2 class="h2 text-light text-center font-weight- display-4">
+                TaskIt
+            </h2>
+        </div>
+        <div class="clearfix mx-auto pb-5 px-2">
+            <input class="form-control mx-auto" style="max-width:60%;" type="search" placeholder="Search a task" aria-label="Search">
+        </div>
+        <div><div class="pt-sm-2 pt-md-4 mb-0"></div></div>
+    </div>
+</div>
+<div class="row clearfix text-center text-light text-decoration-none bg-success mx-auto ox container-fluid">
+    <div class="col-10 col-sm-10 col-md-4 py-2 mx-auto my-3">
+        <h5>Our Users</h5>
+        <div class="cat-content text-center text-monospace">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, expedita placeat unde molestiae eum excepturi. Eos odio quae adipisci fugiat dignissimos veniam doloribus, inventore assumenda, voluptate atque iusto. Accusamus, officia.
+            {% if not user.is_authenticated %}
+            <br>To join us, login <a class="dot-link text-decoration-none" href="{% url 'login' %}"> here </a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-10 col-sm-10 col-md-4 py-2 mx-auto my-3">
+        <h5>About Us</h5>
+        <div class="cat-content text-center text-monospace">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, expedita placeat unde molestiae eum excepturi. Eos odio quae adipisci fugiat dignissimos veniam doloribus, inventore assumenda, voluptate atque iusto. Accusamus, officia.
+            <!-- No check-->
+        </div>
+    </div>
+    <div class="col-10 col-sm-10 col-md-4 py-2 mx-auto my-3">
+        <h5>Our Taskers</h5>
+        <div class="cat-content text-center text-monospace">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, expedita placeat unde molestiae eum excepturi. Eos odio quae adipisci fugiat dignissimos veniam doloribus, inventore assumenda, voluptate atque iusto. Accusamus, officia.
+            <!-- Check if user has staff permision later-->
+            {% if user.is_authenticated %}
+            <br>To join our taskers, click <a class="dot-link text-decoration-none" href="#"> here </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-12 p-2 px-5 border-bottom border-success">
+            <h4>Our Top Services</h4>
+        </div>
+        <div class="col-12 pt-0 pb-2">
+            <span class="mx-auto border-bottom border-success" style="width: 1em"></span>
+        </div>
+    </div>
+</div>
+{% endblock %}
