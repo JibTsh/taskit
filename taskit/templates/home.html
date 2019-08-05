@@ -1,5 +1,6 @@
 <!--Ojo Ajibola-->
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <div class="clearfix base_page mb-0 ox">
     <div class="dark-grad">
@@ -43,13 +44,30 @@
     </div>
 </div>
 <div class="container text-center">
+    <div class="section-header">
+        <h4 class="section-heading-dark">Our Top Services</h4>
+    </div>
     <div class="row">
-        <div class="col-12 p-2 px-5 border-bottom border-success">
-            <h4>Our Top Services</h4>
-        </div>
-        <div class="col-12 pt-0 pb-2">
-            <span class="mx-auto border-bottom border-success" style="width: 1em"></span>
+        
+        <div class="col-9 col-md-4 my-2 mx-auto">
+            <div class="card mx-auto shadow">
+                <div class="service-image">
+                    <img class="card-img-top cardimg" src="{% static 'city.jpg' %}" alt="Card image cap">
+                </div>
+                <div class="card-body cardbody">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+                </div>
+                <div class="my-2 py-2">
+                    <a class="btn btn-light mx-auto"><span class="fas fa-money-bill cb-icon"></span></a>
+                </div>
+                <div class="card-foter ml-3 mr-3 mb-3">
+                <small class="text-muted float-left">Service by: qwerttrdhyg</small>
+                <small class="text-muted float-right">Price: `N 12345</small>
+                </div>
+            </div>    
         </div>
     </div>
 </div>
+
 {% endblock %}

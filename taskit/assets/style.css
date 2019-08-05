@@ -16,6 +16,40 @@
     margin-right: 0;
 }
 
+.section-heading-dark{
+    box-sizing: border-box;
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+
+.section-heading-dark::after{
+    content: "";
+    position: relative;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    width: 120px;
+    background-color: green;
+    margin-top: 8px;
+}
+
+.service-image{
+    width: 100% !important;
+    height: 10rem !important;
+}
+
+.cardimg{
+    object-fit: cover;
+    width: 100% !important;
+    height: 10rem !important;
+}
+
+.cardbody{
+    height: 12rem;
+}
+
 .ox{
     overflow: hidden !important;
 }
@@ -41,4 +75,23 @@ div.base_page{
 div.base_page>div>h2{
     outline: 1px;
     outline-color: black;
+}
+
+.cb-icon{
+ color: black;
+ font-size: 1.6rem;
+}
+
+.social:hover {
+    transform: scale(1.1);
+    color: white !important;
+    opacity: 1;
+}
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+    color: white !important;
+    opacity: 0.5;
 }

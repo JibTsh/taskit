@@ -26,10 +26,11 @@
           <div class="dropdown-menu dropdown-menu-right dropdown-default">
             <a href="{% url 'home' %}" class="dropdown-item">Home</a>
             {% if user.is_authenticated %}
-
+              <div class="dropdown-divider"></div>
               <form id="logout" action="{% url 'logout' %}" method="post" class="d-none">{% csrf_token %}</form>
               <a class="dropdown-item" href="javascript:document.getElementById('logout').submit();">Logout</a>
             {% else %}
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'login' %}">Login</a>
               <a class="dropdown-item" href="{% url 'register' %}">Register</a>
               <!--<a class="dropdown-item" href="{% url 'login' %}"></a>-->
@@ -45,7 +46,18 @@
         {% block content %}
     
         {% endblock %}
-        <p class="mt-5 mb-3 text-muted text-center fixed-bottom ox">© TaskIt {% now "Y" %}</p>
+<div class="bg-success mt-3">
+  <div class="text-center center-block text-light col-10 col-md-8 col-lg-6 mx-auto p-2">
+          <a href="https://www.facebook.com/bootsnipp"><i class="fab fa-facebook-square fa-3x social"></i></a>
+          <a href="https://twitter.com/bootsnipp"><i class="fab fa-twitter-square fa-3x social"></i></a>
+          <a href="https://plus.google.com/+Bootsnipp-page"><i class="fab fa-google-plus-square fa-3x social"></i></a>
+          <a href="mailto:bootsnipp@gmail.com"><i class="fa fa-envelope-square fa-3x social"></i></a>
+  </div>
+  <div class="dark-grad">
+    <p class="p-1 mb-0 text-light text-center ox"><small>© TaskIt {% now "Y" %}</small></p>
+  </div>   
+</div>
+        
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
